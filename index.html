@@ -7,19 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!"><i class="material-icons">home</i>Главная</a></li>
+        <li><a href="#!"><i class="material-icons">people</i>О нас</a></li>
+        <li><a href="#!"><i class="material-icons">grade</i>Услуги</a></li>
+        <li><a href="#!"><i class="material-icons">phone</i>Контакты</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="sidenav-close" href="#!"><i class="material-icons">close</i>Закрыть</a></li>
+      </ul>
     <header class="header">
         <div class="container">
             <div class="header__title">
                 <img src="/img/logo.svg" alt="Logo" class="logo">
-                <button class="burger">
+                <a class="burger sidenav-trigger" data-target="slide-out">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
-                </button>
+                </a>
             </div>
             <h1 class="main__title">Реализуем крупнейшие проекты в россии</h1>
             <h4 class="secondary">Стадионы, газопроводы, мосты, дамбы</h4>
@@ -76,6 +85,15 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+        <h4>Заголовок</h4>
+        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Щеке, буквоград? Однажды домах оксмокс буквоград последний ему? Ipsum запятых от всех текстов если маленький залетают текстами мир заглавных дорогу рукопись переписали бросил, она сих напоивший. Проектах они имеет дал выйти злых рукопись? За над пунктуация ты вдали реторический предупреждал большого большой использовало, раз его города запятых агентство всеми великий безопасную сих, по всей семантика предложения меня. Страна злых вопрос не раз грамматики приставка послушавшись lorem власти своего алфавит. Речью рыбного не это, всемогущая даль жаренные он, большого до агентство вдали путь решила, подпоясал сбить ведущими что там предупреждал. Меня, страну домах?</p>
+        </div>
+    </div>
+
     <section class="request">
         <div class="container">
             <div class="request__flex">
@@ -84,10 +102,10 @@
                     <h5 class="request__h5">Реализуем самые смелые решения в россии!</h5>
                 </div>
                 <div class="request__flex-right">
-                    <button class="request__btn">
+                    <a href = "#modal1" class="request__btn modal-trigger">
                         <img src="/img/email.svg" alt="Email" class="request__icon">
                         Ваш запрос
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -126,28 +144,28 @@
     <section class="portfolio">
         <div class="portfolio__grid">
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="/img/glass__house.jpg" alt="about-item" >
+                <img class="portfolio__img materialboxed" src="/img/glass__house.jpg" alt="about-item" >
             </div>
         </div>
     </section>
@@ -155,22 +173,22 @@
         <div class="container">
             <div class="text-h2 section__h2">Ответы на вопросы</div>
             <div class="question-items">
-                <div class="question-item">
-                    <h3 class="text-h3 question__h3 close">Работаете ли вы по 249 фз?</h3>
+                <details class="question-item">
+                    <summary class="text-h3 question__h3">Работаете ли вы по 249 фз?</summary>
                     <p class="text-p question__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-                </div>
-                <div class="question-item">
-                    <h3 class="text-h3 question__h3 open">Работаете ли вы по 249 фз?</h3>
+                </details>
+                <details class="question-item">
+                    <summary class="text-h3 question__h3">Работаете ли вы по 249 фз?</summary>
                     <p class="text-p question__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-                </div>
-                <div class="question-item">
-                    <h3 class="text-h3 question__h3 close">Работаете ли вы по 249 фз?</h3>
+                </details>
+                <details class="question-item">
+                    <summary class="text-h3 question__h3">Работаете ли вы по 249 фз?</summary>
                     <p class="text-p question__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-                </div>
-                <div class="question-item">
-                    <h3 class="text-h3 question__h3 close">Работаете ли вы по 249 фз?</h3>
+                </details>
+                <details class="question-item">
+                    <summary class="text-h3 question__h3">Работаете ли вы по 249 фз?</summary>
                     <p class="text-p question__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-                </div>
+                </details>
             </div>
         </div>
     </section>
@@ -224,6 +242,13 @@
             </div>
         </div>
     </section>
+    <!-- Modal Structure -->
+    <div id="modal2 materialboxed" class="modal">
+        <div class="modal-content">
+        <h4>Заголовок 2</h4>
+        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+        </div>
+    </div>
     <section class="request">
         <div class="container">
             <div class="request__flex">
@@ -232,10 +257,10 @@
                     <h5 class="request__h5">Оставьте заявку и мы свяжемся с вами!</h5>
                 </div>
                 <div class="request__flex-right">
-                    <button class="request__btn">
+                    <a href = "#modal2" class="request__btn modal-trigger">
                         <img src="/img/email.svg" alt="Email" class="request__icon">
                         Ваш запрос
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -247,12 +272,15 @@
                 <div class="contacts__item">
                     <img class="contacts__icon" src="/img/map.svg" alt="map">
                     <h3 class="text-h3 contacts__h3 contacts__h3-gray">Адрес:</h3>
-                    <h3 class="text-h3 contacts__h3 contacts__h3">Невский проспект 140, <br> офис 140-142</h3>
+                    <h3 class="text-h3 contacts__h3">Невский проспект 140, <br> офис 140-142</h3>
                 </div>
                 <div class="contacts__item">
                     <img class="contacts__icon" src="/img/phone.svg" alt="phone">
                     <h3 class="text-h3 contacts__h3 contacts__h3-gray">Телефон:</h3>
-                    <h3 class="text-h3 contacts__h3 contacts__h3">8 (912) 111-22-33 <br> 8 (912) 111-22-33</h3>
+                    <h3 class="text-h3 contacts__h3">
+                        <a href="tel:+79121112233">8 (912) 111-22-33</a>
+                        <br>
+                        <a href="tel:+79121112233">8 (912) 111-22-33</a></h3>
                 </div>
                 <div class="contacts__item">
                     <img class="contacts__icon" src="/img/time.svg" alt="watch">
@@ -262,7 +290,7 @@
                 <div class="contacts__item">
                     <img class="contacts__icon" src="/img/email-icon-footer.svg" alt="mail">
                     <h3 class="text-h3 contacts__h3 contacts__h3-gray">E-mail:</h3>
-                    <h3 class="text-h3 contacts__h3 contacts__h3-accent">info@vip.ru</h3>
+                    <h3 class="text-h3 contacts__h3 contacts__h3-accent"><a href="mailto:info@vip.ru">info@vip.ru</a></h3>
                 </div>
             </div>
         </div>
@@ -275,5 +303,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
